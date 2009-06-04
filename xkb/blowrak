@@ -1,0 +1,49 @@
+// whatever
+
+
+// Blowrak for swedish
+partial default alphanumeric_keys 
+xkb_symbols "blowrak" {
+
+    name[Group1]="Blowrak - swedish";
+
+    include "se(basic)"
+
+    key <AD01> { [     aring,      Aring,    braceleft,  bracketleft ]	};
+    key <AD02> { [  adiaeresis,	Adiaeresis,        bar,    backslash ]	};
+    key <AD03> { [ odiaeresis, Odiaeresis,  braceright, bracketright ]	};
+    key <AD04> { [         p,          P,        thorn,        THORN ]	};
+    key <AD05> { [         y,          Y,    leftarrow,          yen ]	};
+    key <AD06> { [         f,          F,      dstroke,  ordfeminine ]	};
+    key <AD07> { [         g,          G,          eng,          ENG ]	};
+    key <AD08> { [         c,          C,    copyright,    copyright ]	};
+    key <AD09> { [         r,          R,   registered,   registered ]	};
+    key <AD10> { [         l,          L,      lstroke,      Lstroke ]	};
+    key <AD11> { [     comma,  semicolon, dead_cedilla,  dead_ogonek ]	};
+    key <AD12> { [ dead_diaeresis, dead_circumflex, dead_tilde,	asciicircum	]	};
+
+    key <AC01> { [         a,          A,           ae,           AE ]	};
+    key <AC02> { [         o,          O,           oe,           OE ]	};
+    key <AC03> { [         e,          E,     EuroSign,         cent ]	};
+    key <AC04> { [         u,          U,    downarrow,      uparrow ]	};
+    key <AC05> { [         i,          I,   rightarrow,     idotless ]	};
+    key <AC06> { [         h,          H,      hstroke,      Hstroke ]	};
+    key <AC07> { [         d,          D,          eth,          ETH ]	};
+    key <AC08> { [         t,          T,       tslash,       Tslash ]	};
+    key <AC09> { [         n,          N ]	};
+    key <AC10> { [         s,          S,       ssharp,      section ]	};
+    key <AC11> { [     minus, underscore, dead_belowdot, dead_abovedot ] };
+
+    key <AB01> { [    period,   colon, periodcentered, dead_abovedot ]	};
+    key <AB02> { [         q,          Q,           at,  Greek_OMEGA ]	};
+    key <AB03> { [         j,          J ]	};
+    key <AB04> { [         k,          K,          kra,    ampersand ]	};
+    key <AB05> { [         b,          B, rightdoublequotemark, apostrophe ] };
+    key <AB06> { [         x,          X, guillemotright,    greater ]	};
+    key <AB07> { [         m,          M,           mu,    masculine ]	};
+    key <AB08> { [         w,          W,      lstroke,      Lstroke ]	};
+    key <AB09> { [         v,          V, leftdoublequotemark, grave ]	};
+    key <AB10> { [         z,          Z, guillemotleft,        less ]	};
+};
+
+

@@ -1,0 +1,12 @@
+Source: blowrak
+Section: unknown
+Priority: extra
+Maintainer: Anders Waldenborg <andersg@0x63.nu>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.1
+
+Package: blowrak
+Architecture: all
+Depends: ${misc:Depends}
+Description: Blowrak keymap
+ Blowrak keymap

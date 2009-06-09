@@ -12,7 +12,7 @@ xkb_symbols "blowrak" {
     key <AD01> { [     aring,      Aring,    braceleft,  bracketleft ]	};
     key <AD02> { [  adiaeresis,	Adiaeresis,        bar,    backslash ]	};
     key <AD03> { [ odiaeresis, Odiaeresis,  braceright, bracketright ]	};
-    key <AD04> { [         p,          P,        thorn,        THORN ]	};
+    key <AD04> { [         p,          P,   asciitilde,        THORN ]	};
     key <AD05> { [         y,          Y,    leftarrow,          yen ]	};
     key <AD06> { [         f,          F,      dstroke,  ordfeminine ]	};
     key <AD07> { [         g,          G,          eng,          ENG ]	};
@@ -22,10 +22,10 @@ xkb_symbols "blowrak" {
     key <AD11> { [     comma,  semicolon, dead_cedilla,  dead_ogonek ]	};
     key <AD12> { [ dead_diaeresis, dead_circumflex, dead_tilde,	asciicircum	]	};
 
-    key <AC01> { [         a,          A,           ae,           AE ]	};
-    key <AC02> { [         o,          O,           oe,           OE ]	};
-    key <AC03> { [         e,          E,     EuroSign,         cent ]	};
-    key <AC04> { [         u,          U,    downarrow,      uparrow ]	};
+    key <AC01> { [         a,          A,   bracketleft,           AE ]	};
+    key <AC02> { [         o,          O,     backslash,           OE ]	};
+    key <AC03> { [         e,          E,  bracketright,         cent ]	};
+    key <AC04> { [         u,          U,   asciicircum,      uparrow ]	};
     key <AC05> { [         i,          I,   rightarrow,     idotless ]	};
     key <AC06> { [         h,          H,      hstroke,      Hstroke ]	};
     key <AC07> { [         d,          D,          eth,          ETH ]	};

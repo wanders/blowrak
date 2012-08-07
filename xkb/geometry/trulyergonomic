@@ -1,0 +1,252 @@
+// -*- compile-command: "xkbcomp trulyergonomic - | xkbprint - - | convert -background white -flatten +matte -rotate -90 PS:- PNG:- | display -" -*-
+default xkb_geometry "n_209" {
+
+
+    description= "Truly Ergonomic Keyboard";
+    width= 330;
+    height= 200;
+
+    shape.cornerRadius= 1;
+    shape "NORM" { { [ 18,18] }, { [2,1], [16,17] } };
+    shape "WIDE" { { [ 38,18] }, { [2,1], [36,17] } };
+    shape "TALL" { { [ 18,37] }, { [2,1], [16,36] } };
+    shape "FKEY" { cornerRadius=0, { [ 10,13] } };
+    shape "LED"  { cornerRadius= 1.5, { [ 3,  3] } };
+    shape "EDGE" { cornerRadius=2, { [ 20, 1 ], [ 310, 1 ], [ 329, 199 ], [ 0, 199] } };
+
+    shape "LOGOKEY" { { [ 16,18] }, { [2,1], [14,17] } };
+    shape "DELKEY" { { [ 20,18] }, { [2,1], [18,17] } };
+    shape "TABKEY" { { [ 24,18] }, { [2,1], [22,17] } };
+    shape "BSKEY" { { [ 28,18] }, { [2,1], [26,17] } };
+    shape "ENTERKEY" { { [ 27,18] }, { [2,1], [25,17] } };
+    shape "SPACEBAR" { { [ 38,18] }, { [2,1], [36,17] } };
+
+// 290    20  310
+    outline "Edges" {
+	top= 0;
+	left= 0;
+	shape= "EDGE";
+    };
+
+section "LeftCross" {
+    left=50;
+    top=118;
+    angle=6;
+    row {
+    	top=10;
+	vertical=True;
+	keys { <HOME> };
+    };
+    row {
+        left=20;
+    	vertical=True;
+    	keys { <PGUP>, <PGDN> };
+    };
+    row {
+    	top=10;
+    	left=40;
+    	vertical=True;
+    	keys { <END> };
+    };
+};
+section "RightCross" {
+    left=280;
+    top=118;
+    angle=-6;
+    row {
+    	top=10;
+	left=-20;
+	vertical=True;
+	keys { <LEFT> };
+    };
+    row {
+        left=-40;
+    	vertical=True;
+    	keys { <UP>, <DOWN> };
+    };
+    row {
+    	top=10;
+    	left=-60;
+    	vertical=True;
+    	keys { <RGHT> };
+    };
+};
+
+section "LeftSpace" {
+    left=109;
+    top=126;
+    angle=6;
+key.shape="SPACEBAR";
+    row {
+	keys { <SPCE> };
+    };
+};
+section "RigthSpace" {
+    left=181;
+    top=130;
+    angle=-6;
+key.shape="SPACEBAR";
+    row {
+	keys { <SPCE> };
+    };
+};
+
+    section "TopRow" {
+        left=20;
+        top=2;
+	key.shape= "NORM";
+	key.gap= 2;
+	row {
+	    keys {
+	    	<ESC>,  {<FK01>, gap=4}, <FK02>, <FK03>, <FK04>,
+		{<FK05>, gap=4}, <FK06>, <FK07>, <FK08>, {<FK09>,gap=4}, <FK10>, <FK11>, <FK12>, {<DELE>, gap=4}
+	    };
+	};
+    };
+
+    section "MidColumn" {
+        left=156;
+        top=51;
+	row {
+	    keys {
+	    	{<LWIN>, "LOGOKEY"}
+	    };
+	};
+	row {
+left=-2;
+top=20;
+	    keys {
+	    	{<DELE>, "DELKEY"}
+	    };
+	};
+	row {
+left=-4;
+top=40;
+	    keys {
+	    	{<TAB>, "TABKEY"}
+	    };
+	};
+	row {
+left=-6;
+top=60;
+	    keys {
+	    	{<BKSP>, "BSKEY"}
+	    };
+	};
+	row {
+left=-5;
+top=80;
+	    keys {
+	    	{<RTRN>, "ENTERKEY"}
+	    };
+	};
+    };
+
+
+    section "minirow" {
+        left=135;
+        top=22;
+	key.shape= "NORM";
+	key.gap= 2;
+	row {
+	    keys { <CAPS>, <CAPS>, <NMLK> };
+	};
+    };
+
+
+//    row.vertical= True;
+//    row.top= 1;
+//    key.gap= 0.5;
+
+    section "Left" {
+row.vertical=True;
+key.gap=2;
+	top=  34;
+	left= 16;
+        angle = 6;
+	row {
+	    left= 2;
+	    keys { <LSGT>, <BKSL>, { <LFSH>, "WIDE"}, { <LCTL>, "WIDE"}, <X000>};
+	};
+	row {
+	    left= 22;
+	    keys { <AE00>, <AB10>, { <LALT>, gap=42 } };
+	};
+	row {
+	    left= 42;
+	    keys { <AE01>, <AD01>, <AC01>, <AB01> };
+	};
+	row {
+	    left= 62;
+top=-2.5;
+	    keys { <AE02>, <AD02>, <AC02>, <AB02> };
+	};
+	row {
+	    left= 82;
+top=-5;
+	    keys { <AE03>, <AD03>, <AC03>, <AB03> };
+	};
+	row {
+top=-2.5;
+	    left= 102;
+	    keys { <AE04>, <AD04>, <AC04>, <AB04> };
+	};
+	row {
+	    left=122;
+	    keys { <AE05>, <AD05>, <AC05>, <AB05> };
+	};
+    }; // End of "LeftAlpha" section
+
+    section "Right" {
+row.vertical=True;
+key.gap=2;
+	top=  34;
+	left= 314;
+        angle = -6;
+	row {
+	    left= -22;
+	    keys { <AE12>, <AD12>, { <AB11>, gap=42 } };
+	};
+	row {
+	    left= -42;
+	    keys { <AE11>, <AD11>, { <RTSH>, "WIDE"}, { <RCTL>, "WIDE"}, <RALT> };
+	};
+	row {
+	    left= -62;
+	    keys { <AE10>, <AD10>, <AC10>, <AC11> };
+	};
+	row {
+	    left= -82;
+top=-2.5;
+	    keys { <AE09>, <AD09>, <AC09>, <AB09> };
+	};
+	row {
+	    left= -102;
+top=-5;
+	    keys { <AE08>, <AD08>, <AC08>, <AB08> };
+	};
+	row {
+top=-2.5;
+	    left=-122;
+	    keys { <AE07>, <AD07>, <AC07>, <AB07> };
+	};
+	row {
+	    left= -142;
+	    keys { <AE06>, <AD06>, <AC06>, <AB06> };
+	};
+    }; // End of "LeftAlpha" section
+
+    indicator.shape= "LED";
+    indicator.top= 34;
+    indicator.onColor= "blue";
+    indicator.offColor= "blue30";
+    indicator "Caps Lock" { left= 145; };
+    indicator "NumLock"  { left= 185; };
+
+
+
+    alias <AC00> = <CAPS>;
+    alias <AA00> = <LCTL>;
+};
+
+

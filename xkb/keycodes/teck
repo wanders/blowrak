@@ -1,0 +1,13 @@
+
+// this is a hack to give the bottom left key another name than <HKTG> which is messed with in other files.
+default xkb_keycodes "teck" {
+    include "evdev(evdev)"
+    <X000> = 101;
+
+// bottom row modifiers
+// 101
+// 64
+// 108
+    <LVL3> = 97;
+};
+

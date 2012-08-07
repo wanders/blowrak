@@ -39,7 +39,7 @@ install: build
 	dh_prep  
 	dh_installdirs
 
-	install xkb/blowrak debian/blowrak/usr/share/X11/xkb/symbols/blowrak
+	install xkb/symbols/blowrak debian/blowrak/usr/share/X11/xkb/symbols/blowrak
 
 
 # Build architecture-independent files here.
